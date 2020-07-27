@@ -23,6 +23,7 @@ f3.pack(side=LEFT)
 f4=Frame(root,width=100,height=700,relief=SUNKEN)
 f4.pack(side=LEFT)
 
+
 # -------------------Main Screen--------------------
 txt_input=StringVar(value = "Master Python Today...")
 
