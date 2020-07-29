@@ -78,6 +78,22 @@ lblQtofMeal.grid(row=1,column=0)
 txtQtofMeal = Entry(f1,font=('aerial',16,'bold'),textvariable=Meal1,bd=10,insertwidth=4,bg='white',justify='right')
 txtQtofMeal.grid(row=1,column=1)
 
+#--------------------Choose Drinks-------------------------
+Drink1 =IntVar()
+Drinkdicator=StringVar(value='Fresh Drinks')
+
+lblDrink = Label(f1,font=('aerial',16,'bold'),text='Choose Drink',bd=10,anchor=W)
+lblDrink.grid(row=2,column=0)
+txtDrink=ttk.Combobox(f1,font=('aerial',16,'bold'),textvariable=Drinkdicator)
+txtDrink['values']=('Bottled water','Lime Juice','Cold Coffee','Heineken','Red Wine')
+txtDrink.grid(row=2,column=1)
+
+lblQtofDrink = Label(f1,font=('aerial',16,'bold'),text='Qty. of Drink',bd=10,anchor=W)
+lblQtofDrink.grid(row=1,column=0)
+txtQtofDrink = Entry(f1,font=('aerial',16,'bold'),textvariable=Drink1,bd=10,insertwidth=4,bg='white',justify='right')
+txtQtofDrink.grid(row=3,column=1)
+
+
 
 
 root.mainloop()
