@@ -63,6 +63,21 @@ btnequal = Button(f2,padx=64,pady=2,bd=8,font=('aerial',30,'bold'),text='=',bg='
 btnopenbracket = Button(f2,padx=19,pady=2,bd=8,font=('aerial',30,'bold'),text='(',bg='yellow').grid(row=5,column=2)
 btnclosecracket = Button(f2,padx=23,pady=2,bd=8,font=('aerial',30,'bold'),text=')',bg='yellow').grid(row=5,column=3)
 
+#-------------------------Choose Meal-------------------
+Meal1 =IntVar()
+Mealdicator=StringVar(value='Delicious Meals')
+
+lblMeal = Label(f1,font=('aerial',16,'bold'),text='Choose Meal',bd=10,anchor=W)
+lblMeal.grid(row=0,column=0)
+txtMeal=ttk.Combobox(f1,font=('aerial',16,'bold'),textvariable=Mealdicator)
+txtMeal['values']=('Fried Rice','Fried rice and Chicken','Chilli chicken','HamBurger','CheesePizza')
+txtMeal.grid(row=0,column=1)
+
+lblQtofMeal = Label(f1,font=('aerial',16,'bold'),text='Qty. of Meal',bd=10,anchor=W)
+lblQtofMeal.grid(row=1,column=0)
+txtQtofMeal = Entry(f1,font=('aerial',16,'bold'),textvariable=Meal1,bd=10,insertwidth=4,bg='white',justify='right')
+txtQtofMeal.grid(row=1,column=1)
+
 
 
 root.mainloop()
