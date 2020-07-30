@@ -113,8 +113,42 @@ MyRadio.grid(row=5,column=1)
 MyRadio = Radiobutton(f1,text='No',font=("aerial",16,"bold"),variable=v,value=3)
 MyRadio.grid(row=5,column=1,sticky=E)
 
+#-------------------Cost Display Screen-----------------
+Cost=StringVar()
+lblMeal1 = Label(f1,font=('aerial',16,'bold'),text="Cost of Meal(Rs.)",bd=16,anchor=W)
+lblMeal1.grid(row=0,column=2)
+txtMeal1=Entry(f1,font=('aerial',16,'bold'),textvariable=Cost,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtMeal1.grid(row=0,column=3)
 
+Drinks=StringVar()
+lblDrink1 = Label(f1,font=('aerial',16,'bold'),text="Cost of Drink(Rs.)",bd=16,anchor=W)
+lblDrink1.grid(row=1,column=2)
+txtDrink1=Entry(f1,font=('aerial',16,'bold'),textvariable=Drinks,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtDrink1.grid(row=1,column=3)
 
+DevCost=StringVar()
+lblDev = Label(f1,font=('aerial',16,'bold'),text="Delivery Cost(Rs.)",bd=16,anchor=W)
+lblDev.grid(row=2,column=2)
+txtDev=Entry(f1,font=('aerial',16,'bold'),textvariable=DevCost,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtDev.grid(row=2,column=3)
+
+RoomCost=StringVar()
+lblRoom = Label(f1,font=('aerial',16,'bold'),text="Cost of Room(Rs.)",bd=16,anchor=W)
+lblRoom.grid(row=3,column=2)
+txtRoom=Entry(f1,font=('aerial',16,'bold'),textvariable=RoomCost,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtRoom.grid(row=3,column=3)
+
+ServiceCharge=StringVar()
+lblService = Label(f1,font=('aerial',16,'bold'),text="Servive Fee(Rs.)",bd=16,anchor=W)
+lblService.grid(row=4,column=2)
+txtService=Entry(f1,font=('aerial',16,'bold'),textvariable=ServiceCharge,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtService.grid(row=4,column=3)
+
+Total=StringVar()
+lblTotal = Label(f1,font=('aerial',16,'bold'),text="Total Cost(Rs.)",bd=16,anchor=W)
+lblTotal.grid(row=4,column=2)
+txtTotal=Entry(f1,font=('aerial',16,'bold'),textvariable=Total,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
+txtTotal.grid(row=4,column=3)
 
 
 
