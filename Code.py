@@ -93,6 +93,28 @@ lblQtofDrink.grid(row=1,column=0)
 txtQtofDrink = Entry(f1,font=('aerial',16,'bold'),textvariable=Drink1,bd=10,insertwidth=4,bg='white',justify='right')
 txtQtofDrink.grid(row=3,column=1)
 
+#-------------------Order Delivery------------------------
+chkb1 = IntVar()
+
+lblHomeDev = Label(f1,font=("aerial",16,'bold'),text='Order Delivery',bd=10,anchor=W)
+lblHomeDev.grid(row=4,column=0)
+check1 = Checkbutton(f1,text='Yes',variable=chkb1,font=('aerial',16,'bold'))
+check1.grid(row=4,column=1)
+
+#-----------------Book a Room --------------------------
+v= IntVar()
+v.set(3)
+lblRoom = Label(f1,font=('aerial',16,'bold'),text='Book a Room',bd=10,anchor=W)
+lblRoom.grid(row=5,column=0)
+MyRadio = Radiobutton(f1,text='VIP',font=("aerial",16,"bold"),variable=v,value=1)
+MyRadio.grid(row=5,column=1,sticky=W)
+MyRadio = Radiobutton(f1,text='Normal',font=("aerial",16,"bold"),variable=v,value=2)
+MyRadio.grid(row=5,column=1)
+MyRadio = Radiobutton(f1,text='No',font=("aerial",16,"bold"),variable=v,value=3)
+MyRadio.grid(row=5,column=1,sticky=E)
+
+
+
 
 
 
