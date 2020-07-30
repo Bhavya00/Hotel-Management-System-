@@ -150,6 +150,25 @@ lblTotal.grid(row=4,column=2)
 txtTotal=Entry(f1,font=('aerial',16,'bold'),textvariable=Total,fg='white',bd=10,insertwidth=4,bg='blue',justify='right')
 txtTotal.grid(row=4,column=3)
 
+#---------------------Currency Converter---------------------------
+var1 = IntVar()
+indicator = StringVar(value='Choose a Country')
+
+lblCunCon = Label(f1,font=('aerial',16,'bold italic'),text='----------------------Currency Converter----------------',bd=20,anchor=W)
+lblCunCon.grid(row=6,column=0,columnspan=4)
+
+lblCountry = Label(f1,font=('aerial',16,'bold'),text='Nationality',bd=20,anchor=W)
+lblCountry.grid(row=7,column=0)
+txtCountry = ttk.Combobox(f1,font=('aerial',16,'bold'),textvariable=indicator)
+txtCountry['values']=('China','France','Ghana','USA','Mexico','Nigeria')
+txtCountry.grid(row=7,column=1)
+
+lblAmount = Label(f1,font=('aerial',16,'bold'),text='Amount(Rs. )',bd=20,anchor=W)
+lblAmount.grid(row=7,column=2)
+txtAmount=Entry(f1,font=('aerial',16,'bold'),textvariable=var1,bd=10,insertwidth=4,bg='white',justify='right')
+txtAmount.grid(row=7,column=3)
+
+
 
 
 root.mainloop()
