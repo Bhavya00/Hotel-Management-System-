@@ -168,6 +168,27 @@ lblAmount.grid(row=7,column=2)
 txtAmount=Entry(f1,font=('aerial',16,'bold'),textvariable=var1,bd=10,insertwidth=4,bg='white',justify='right')
 txtAmount.grid(row=7,column=3)
 
+#---------------------Control Buttons---------------------------------
+btnConvert= Button(f1,padx=7,pady=4,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Convert',bg='orange')
+btnConvert.grid(row=8,column=2)
+
+btnTotal= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Total',bg='orange')
+btnTotal.grid(row=0,column=0)
+
+btnScreen= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Clear',bg='blue')
+btnScreen.grid(row=1,column=0)
+
+btnReset= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Reset',bg='green')
+btnReset.grid(row=2,column=0)
+
+btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red')
+btnExit.grid(row=3,column=0)
+
+#--------------------------Logo----------------------------------------
+photo=PhotoImage(file='logo.png') ## Write the full path of image
+myphoto = Label(f1,image=photo)
+myphoto.grid(row=8,column=0)
+
 
 
 
