@@ -66,6 +66,53 @@ def TotalResult():
         vard3 =(vard2*0.0)
         Drinks.set(vard3)
 
+    #-----------------Delivery Cost-------------------------
+    num1 = float(Cost.get())
+    num2 = float(Drinks.get())
+    Delivery = (num1+num2)*0.5
+
+    #---------------Booking For Room-------------------------
+    room =v.get()
+    null = 0.0
+    rvip = 600.0 #----------cost of VIP room -------------------
+    rvip1 = Delivery/(600*0.5)#-------------VIP room with Delivery cost----
+
+    rnormal=400.0 #------------cost of normal room----------
+    rnormal1=Delivery/(400*2.5)#-------Normal room with Delivery cost----
+
+    if room ==1:
+        if chkb1.get == 1:
+            ServiceCharge.set(rvip1)
+            RoomCost.set(600.0)
+            DevCost.set(Delivery)
+        else:
+            ServiceCharge.set(null)
+            DevCost.set(null)
+            RoomCost.set(600.0)
+
+    elif room ==2:
+        if chkb1.get == 1:
+            ServiceCharge.set(rnormal1)
+            RoomCost.set(400.0)
+            DevCost.set(Delivery)
+        else:
+            ServiceCharge.set(null)
+            DevCost.set(null)
+            RoomCost.set(400.0)
+
+
+    elif room =3:
+        if chkb1.get == 1:
+            ServiceCharge.set(null)
+            RoomCost.set(null)
+            DevCost.set(null)
+        else:
+            ServiceCharge.set(null)
+            DevCost.set(null)
+            RoomCost.set(null)
+
+
+
 
 
 
