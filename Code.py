@@ -2,6 +2,8 @@ from tkinter import*
 import time
 from tkinter import ttk
 
+#--------------------------Calculator Functions----------------
+
 def btn(numbers):
     global__operator
     operator = operator + str(numbers)
@@ -17,7 +19,55 @@ def Equal():
     global__operator
     sumup = float(eval(operator))
     txt_input.set(sumup)
-    operator = ''    
+    operator = ''
+
+#------------------------Total Function--------------------
+def TotalResult():
+    #--------------Cost of Meal---------------------------
+    varme1 = Mealdicator.get()
+    varme2 =Meal1.get()
+    if varme1 == 'Fried Rice':
+        varme3 = (varme2*250)
+        Cost.set(varme3)
+    elif varme1 == 'Fried rice and Chicken':
+        varme3 = (varme2*450)
+        Cost.set(varme3)
+    elif varme1 == 'Chilli chicken':
+        varme3 = (varme2*200)
+        Cost.set(varme3)
+    elif varme1 == 'HamBurger':
+        varme3 = (varme2*150)
+        Cost.set(varme3)
+    elif varme1 == 'CheesePizza':
+        varme3 = (varme2*300)
+        Cost.set(varme3)
+    else:
+        varme3 =(varme2*0.0)
+        Cost.set(varme3)
+    #----------------Cost of Drinks-----------------------
+    vard1 = Drinkdicator.get()
+    vard2 =Drink1.get()
+    if vard1 == 'Bottled water':
+        vard3 = (vard2*20)
+        Drinks.set(vard3)
+    elif vard1 == 'Lime Juice':
+        vard3 = (vard2*25)
+        Drinks.set(vard3)
+    elif vard1 == 'Cold Coffee':
+        vard3 = (vard2*50)
+        Drinks.set(vard3)
+    elif vard1 == 'Heineken':
+        vard3 = (vard2*1800)
+        Drinks.set(vard3)
+    elif vard1 == 'Red Wine':
+        vard3 = (vard2*880)
+        Drinks.set(vard3)
+    else:
+        vard3 =(vard2*0.0)
+        Drinks.set(vard3)
+
+
+
 
 root=Tk()
 root.geometry('1600x800+0+0')
