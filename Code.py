@@ -101,7 +101,7 @@ def TotalResult():
             RoomCost.set(400.0)
 
 
-    elif room =3:
+    elif room ==3:
         if chkb1.get == 1:
             ServiceCharge.set(null)
             RoomCost.set(null)
@@ -110,6 +110,23 @@ def TotalResult():
             ServiceCharge.set(null)
             DevCost.set(null)
             RoomCost.set(null)
+
+    #------------Total Result-----------------#
+    num3 = float(DevCost.get())
+    num4 = float(RoomCost.get())
+    num5 = float(ServiceCharge.get())
+
+    MyTotal=num1+num2+num3+num4+num5
+    Total.set(MyTotal)
+    FinalTotal = "Total = Rs.", MyTotal
+
+    num6=Total.get()
+    Display.delete(0,End)
+    Display.insert(0,FinalTotal)
+
+    if num6 <= '0.0':
+        Display.delete(0,End)
+        Display.insert(0,'Please make an order.....')
 
 
 
@@ -288,7 +305,7 @@ txtAmount.grid(row=7,column=3)
 btnConvert= Button(f1,padx=7,pady=4,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Convert',bg='orange')
 btnConvert.grid(row=8,column=2)
 
-btnTotal= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Total',bg='orange')
+btnTotal= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Total',bg='orange',command=TotalResult)
 btnTotal.grid(row=0,column=0)
 
 btnScreen= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Clear',bg='blue')
