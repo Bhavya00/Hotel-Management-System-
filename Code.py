@@ -69,7 +69,7 @@ def TotalResult():
     #-----------------Delivery Cost-------------------------
     num1 = float(Cost.get())
     num2 = float(Drinks.get())
-    Delivery = (num1+num2)*0.5
+    Delivery = "{:.2f}".format((num1+num2)*0.15)
 
     #---------------Booking For Room-------------------------
     room =v.get()
@@ -81,7 +81,7 @@ def TotalResult():
     rnormal1=Delivery/(400*2.5)#-------Normal room with Delivery cost----
 
     if room ==1:
-        if chkb1.get == 1:
+        if chkb1.get() == 1:
             ServiceCharge.set(rvip1)
             RoomCost.set(600.0)
             DevCost.set(Delivery)
@@ -91,7 +91,7 @@ def TotalResult():
             RoomCost.set(600.0)
 
     elif room ==2:
-        if chkb1.get == 1:
+        if chkb1.get() == 1:
             ServiceCharge.set(rnormal1)
             RoomCost.set(400.0)
             DevCost.set(Delivery)
@@ -102,7 +102,7 @@ def TotalResult():
 
 
     elif room ==3:
-        if chkb1.get == 1:
+        if chkb1.get() == 1:
             ServiceCharge.set(null)
             RoomCost.set(null)
             DevCost.set(null)
