@@ -161,14 +161,43 @@ def Convert():
         Display.delete(0,END)
         Display.insert(0,'Error Select a Country')
 
+# ----------------------------Reset Button-----------------------
+def Hotel():
+    Display.delete(0,END)
+    Display.insert(0,"Hotel Management System")
 
+def Powered():
+    Display.delete(0,END)
+    Display.insert(0,"Powered by Python")
 
+def Reset():
+    Display.delete(0,END)
+    Display.insert(0,"System Ressetting.......")
+    Display.after(2000,Hotel)
+    Display.after(4000,Powered)
+    Display.after(6000,Rest)
 
-
-
-
-
-
+def Rest():
+    Clear()
+    Display.delete(0,END)
+    Display.insert(0,'Hello! Welcome')
+    Mealdicator.set(value="Delicious Meal")
+    Drinkdicator.set(value="Fresh Drink")
+    indicator.set(value="Choose a country")
+    txtQtofMeal.delete(0,END)
+    txtQtofMeal.insert(0,0)
+    txtQtofDrink.delete(0,END)
+    txtQtofDrink.insert(0,0)
+    txtAmount.delete(0,END)
+    txtAmount.insert(0,0)
+    RoomCost.set(0.0)
+    Total.set(0.0)
+    ServiceCharge.set(0.0)
+    Drinks.set(0.0)
+    Cost.set(0.0)
+    chkb1.set(0.0)
+    v.set(3)
+    DevCost(0.0)
 
 
 root=Tk()
@@ -349,7 +378,7 @@ btnTotal.grid(row=0,column=0)
 btnScreen= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Clear',bg='blue')
 btnScreen.grid(row=1,column=0)
 
-btnReset= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Reset',bg='green')
+btnReset= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Reset',bg='green',command=Reset)
 btnReset.grid(row=2,column=0)
 
 btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red')
