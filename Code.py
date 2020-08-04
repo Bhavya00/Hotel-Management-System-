@@ -128,6 +128,44 @@ def TotalResult():
         Display.delete(0,End)
         Display.insert(0,'Please make an order.....')
 
+# ---------------Function for Currency Converter--------------------
+
+def Convert():
+    var2=indicator.get()
+    var=var1.get()
+    if var2=="China":
+        Display.delete(0,END)
+        var4=("Yuan",(var3*0.093))
+        Display.insert(0,var4)
+    elif var2=="France":
+        Display.delete(0,END)
+        var4=("Euro",(var3*88.36))
+        Display.insert(0,var4)
+    elif var2=="Ghana":
+        Display.delete(0,END)
+        var4=("Ghanian cedi",(var3*13.05))
+        Display.insert(0,var4)
+    elif var2=="USA":
+        Display.delete(0,END)
+        var4=("USD",(var3*75.09))
+        Display.insert(0,var4)
+    elif var2=="Mexico":
+        Display.delete(0,END)
+        var4=("Mexican Peso",(var3*3.31))
+        Display.insert(0,var4)
+    elif var2=="Nigeria":
+        Display.delete(0,END)
+        var4=("Nigerian Naira",(var3*0.19))
+        Display.insert(0,var4)
+    else:
+        Display.delete(0,END)
+        Display.insert(0,'Error Select a Country')
+
+
+
+
+
+
 
 
 
@@ -302,7 +340,7 @@ txtAmount=Entry(f1,font=('aerial',16,'bold'),textvariable=var1,bd=10,insertwidth
 txtAmount.grid(row=7,column=3)
 
 #---------------------Control Buttons---------------------------------
-btnConvert= Button(f1,padx=7,pady=4,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Convert',bg='orange')
+btnConvert= Button(f1,padx=7,pady=4,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Convert',bg='orange',command=Convert)
 btnConvert.grid(row=8,column=2)
 
 btnTotal= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Total',bg='orange',command=TotalResult)
