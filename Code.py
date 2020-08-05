@@ -197,7 +197,27 @@ def Rest():
     Cost.set(0.0)
     chkb1.set(0.0)
     v.set(3)
-    DevCost(0.0)
+    DevCost.set(0.0)
+
+# -------------------Clear Button----------------------
+def ClearScreen():
+    Display.delete(0,END)
+    RoomCost.set('')
+    Total.set('')
+    ServiceCharge.set('')
+    Drinks.set('')
+    Cost.set('')
+    DevCost.set('')
+# ---------------------Exit------------------------------
+def Stop():
+    root.destroy()
+
+def Exit():
+    Display.delete(0,END)
+    Display.insert(0,"Thanks for Patronage............")
+    Display.after(3000,Stop)
+
+
 
 
 root=Tk()
@@ -375,13 +395,13 @@ btnConvert.grid(row=8,column=2)
 btnTotal= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Total',bg='orange',command=TotalResult)
 btnTotal.grid(row=0,column=0)
 
-btnScreen= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Clear',bg='blue')
+btnScreen= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Clear',bg='blue',command=ClearScreen)
 btnScreen.grid(row=1,column=0)
 
 btnReset= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Reset',bg='green',command=Reset)
 btnReset.grid(row=2,column=0)
 
-btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red')
+btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red',commad=Exit)
 btnExit.grid(row=3,column=0)
 
 #--------------------------Logo----------------------------------------
