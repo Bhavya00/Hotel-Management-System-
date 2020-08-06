@@ -1,6 +1,12 @@
 from tkinter import*
 import time
 from tkinter import ttk
+import datetime
+
+msg1 = "Welcome to our Hotel......"
+msg2 = "Hope You Enjoyed Our Servive"
+text1=""
+n=0
 
 #--------------------------Calculator Functions----------------
 
@@ -217,6 +223,48 @@ def Exit():
     Display.insert(0,"Thanks for Patronage............")
     Display.after(3000,Stop)
 
+#-----------------Time-----------------------------------
+def tick():
+    d=datetime.now()
+    Today = '[:%B %d, %Y]'.format(d)
+
+    mytime = time.strftime('%I:%M:%S%p')
+    lblInfo.config(text=(mytime+' '+Today))
+    lblInfo.after(200,tick)
+
+#------------------Scroll Function-------------------------
+def display1():
+    global tetx1, n, msg1
+    for t in range(len(msg1)):
+        for k in range(t):
+            text1 += ' '
+        for  g in range(len(msg1)-t):
+            text1 += msg1[g]
+        text1 = text1.strip()
+        f2.update()
+        f2.after(200)
+        scroll_text.set('')
+        scroll_text.set(text1)
+        text1=''
+    scroll_text.set('')
+    txtscroll.after(200,display2)
+
+def display2():
+    global tetx1, n, msg2
+    for t in range(len(msg2)):
+        for k in range(t):
+            text1 += ' '
+        for  g in range(t-len(msg2)):
+            text1 += msg2[g]
+        text1 = text1.strip()
+        f2.update()
+        f2.after(200)
+        scroll_text.set('')
+        scroll_text.set(text1)
+        text1=''
+    scroll_text.set('')
+    txtscroll.after(200,display2)
+
 
 
 
@@ -401,7 +449,7 @@ btnScreen.grid(row=1,column=0)
 btnReset= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Reset',bg='green',command=Reset)
 btnReset.grid(row=2,column=0)
 
-btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red',commad=Exit)
+btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red',command=Exit)
 btnExit.grid(row=3,column=0)
 
 #--------------------------Logo----------------------------------------
@@ -413,6 +461,7 @@ myphoto.grid(row=8,column=0)
 scroll_text=StringVar()
 txtscroll = Entry(f2,textvariable = scroll_text ,font=('aerial',16,'bold'),fg='white',bd='10',bg='blue',width=32)
 txtscroll.grid(row=0,column=0,columnspan=4)
+display
 
 
 
