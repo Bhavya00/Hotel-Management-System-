@@ -250,38 +250,38 @@ Display.grid(columnspan=4)
 
 #-------------------Date and Time--------------------
 localtime=time.asctime(time.localtime(time.time()))
-lblInfo = Label(f2,font=('arial',20,'bold'),text=localtime,fg='dark blue',bd=10,anchor=W)
-lblInfo.grid(row=0,column=0,columnspan=4)
+lblInfo = Label(f2,font=('arial',20,'bold'),text=localtime,fg='dark blue',bd=5,anchor=W)
+lblInfo.grid(row=1,column=0,columnspan=4)
 
 # ------------------------Row-1-------------------------
 operator=''
 
-btn7 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='7',command=lambda:btn(7)).grid(row=1,column=0)
-btn8 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='8',command=lambda:btn(8)).grid(row=1,column=1)
-btn9 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='9',command=lambda:btn(9)).grid(row=1,column=2)
-btnC = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='C',bg='green',command=Clear).grid(row=1,column=3)
+btn7 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='7',command=lambda:btn(7)).grid(row=2,column=0)
+btn8 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='8',command=lambda:btn(8)).grid(row=2,column=1)
+btn9 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='9',command=lambda:btn(9)).grid(row=2,column=2)
+btnC = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='C',bg='green',command=Clear).grid(row=2,column=3)
 
 # ------------------------Row-2-------------------------
-btn4 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='4',command=lambda:btn(4)).grid(row=2,column=0)
-btn5 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='5',command=lambda:btn(5)).grid(row=2,column=1)
-btn6 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='6',command=lambda:btn(6)).grid(row=2,column=2)
-btnplus = Button(f2,padx=18,pady=5,bd=8,font=('aerial',30,'bold'),text='+',bg='yellow',command=lambda:btn('+')).grid(row=2,column=3)
+btn4 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='4',command=lambda:btn(4)).grid(row=3,column=0)
+btn5 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='5',command=lambda:btn(5)).grid(row=3,column=1)
+btn6 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='6',command=lambda:btn(6)).grid(row=3,column=2)
+btnplus = Button(f2,padx=18,pady=5,bd=8,font=('aerial',30,'bold'),text='+',bg='yellow',command=lambda:btn('+')).grid(row=3,column=3)
 
 # ------------------------Row-3-------------------------
-btn1 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='1',command=lambda:btn(1)).grid(row=3,column=0)
-btn1 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='2',command=lambda:btn(2)).grid(row=3,column=1)
-btn3 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='3',command=lambda:btn(3)).grid(row=3,column=2)
-btnminus = Button(f2,padx=23,pady=5,bd=8,font=('aerial',30,'bold'),text='-',bg='yellow',command=lambda:btn('-')).grid(row=3,column=3)
+btn1 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='1',command=lambda:btn(1)).grid(row=4,column=0)
+btn1 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='2',command=lambda:btn(2)).grid(row=4,column=1)
+btn3 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='3',command=lambda:btn(3)).grid(row=4,column=2)
+btnminus = Button(f2,padx=23,pady=5,bd=8,font=('aerial',30,'bold'),text='-',bg='yellow',command=lambda:btn('-')).grid(row=4,column=3)
 # ------------------------Row-4-------------------------
-btn0 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='0',command=lambda:btn(0)).grid(row=4,column=0)
-btndot = Button(f2,padx=21,pady=5,bd=8,font=('aerial',30,'bold'),text='.',bg='yellow',command=lambda:btn('.')).grid(row=4,column=1)
-btndivision = Button(f2,padx=20,pady=5,bd=8,font=('aerial',30,'bold'),text='/',bg='yellow',command=lambda:btn('/')).grid(row=4,column=2)
-btnmul = Button(f2,padx=19,pady=5,bd=8,font=('aerial',30,'bold'),text='x',bg='yellow',command=lambda:btn('*')).grid(row=4,column=3)
+btn0 = Button(f2,padx=15,pady=5,bd=8,font=('aerial',30,'bold'),text='0',command=lambda:btn(0)).grid(row=5,column=0)
+btndot = Button(f2,padx=21,pady=5,bd=8,font=('aerial',30,'bold'),text='.',bg='yellow',command=lambda:btn('.')).grid(row=5,column=1)
+btndivision = Button(f2,padx=20,pady=5,bd=8,font=('aerial',30,'bold'),text='/',bg='yellow',command=lambda:btn('/')).grid(row=5,column=2)
+btnmul = Button(f2,padx=19,pady=5,bd=8,font=('aerial',30,'bold'),text='x',bg='yellow',command=lambda:btn('*')).grid(row=5,column=3)
 
 # ------------------------Row-5-------------------------
-btnequal = Button(f2,padx=64,pady=2,bd=8,font=('aerial',30,'bold'),text='=',bg='green',command=Equal).grid(row=5,column=0,columnspan=2)
-btnopenbracket = Button(f2,padx=19,pady=2,bd=8,font=('aerial',30,'bold'),text='(',bg='yellow',command=lambda:btn('(')).grid(row=5,column=2)
-btnclosecracket = Button(f2,padx=23,pady=2,bd=8,font=('aerial',30,'bold'),text=')',bg='yellow',command=lambda:btn(')')).grid(row=5,column=3)
+btnequal = Button(f2,padx=64,pady=2,bd=8,font=('aerial',30,'bold'),text='=',bg='green',command=Equal).grid(row=6,column=0,columnspan=2)
+btnopenbracket = Button(f2,padx=19,pady=2,bd=8,font=('aerial',30,'bold'),text='(',bg='yellow',command=lambda:btn('(')).grid(row=6,column=2)
+btnclosecracket = Button(f2,padx=23,pady=2,bd=8,font=('aerial',30,'bold'),text=')',bg='yellow',command=lambda:btn(')')).grid(row=6,column=3)
 
 #-------------------------Choose Meal-------------------
 Meal1 =IntVar()
@@ -409,6 +409,10 @@ photo=PhotoImage(file='logo.png') ## Write the full path of image
 myphoto = Label(f1,image=photo)
 myphoto.grid(row=8,column=0)
 
+# ----------------------Scrollable Text-------------------------------
+scroll_text=StringVar()
+txtscroll = Entry(f2,textvariable = scroll_text ,font=('aerial',16,'bold'),fg='white',bd='10',bg='blue',width=32)
+txtscroll.grid(row=0,column=0,columnspan=4)
 
 
 
