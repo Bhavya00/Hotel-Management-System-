@@ -461,7 +461,8 @@ myphoto.grid(row=8,column=0)
 scroll_text=StringVar()
 txtscroll = Entry(f2,textvariable = scroll_text ,font=('aerial',16,'bold'),fg='white',bd='10',bg='blue',width=32)
 txtscroll.grid(row=0,column=0,columnspan=4)
-display
+display1
+display2
 
 
 
