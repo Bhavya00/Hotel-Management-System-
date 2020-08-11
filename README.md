@@ -1,4 +1,4 @@
-# Hotel-Management-System-
+# Hotel-Management-System
 This is a Hotel Management system built using Tkinter and python3 .It is created to simplify the hotel operations by automating them.
 It consist of various sections like for making order it has meal selection and drink selection options and it also have delivery option with the room booking function .
 It consist of logo of the comapany and also the currency converter if used by different nations .
