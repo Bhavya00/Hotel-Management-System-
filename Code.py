@@ -138,7 +138,7 @@ def TotalResult():
 
 def Convert():
     var2=indicator.get()
-    var=var1.get()
+    var3=var1.get()
     if var2=="China":
         Display.delete(0,END)
         var4=("Yuan",(var3*0.093))
