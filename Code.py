@@ -11,18 +11,18 @@ n=0
 #--------------------------Calculator Functions----------------
 
 def btn(numbers):
-    global__operator
+    global operator
     operator = operator + str(numbers)
     txt_input.set(operator)
 
 def Clear():
-    global__operator
+    global operator
     operator = ''
     txt_input.set('')
     Display.insert(0,'Start Calculating.....')
 
 def Equal():
-    global__operator
+    global operator
     sumup = float(eval(operator))
     txt_input.set(sumup)
     operator = ''
@@ -81,10 +81,10 @@ def TotalResult():
     room =v.get()
     null = 0.0
     rvip = 600.0 #----------cost of VIP room -------------------
-    rvip1 = Delivery/(600*0.5)#-------------VIP room with Delivery cost----
+    rvip1 = float(Delivery)/(600*0.5)#-------------VIP room with Delivery cost----
 
     rnormal=400.0 #------------cost of normal room----------
-    rnormal1=Delivery/(400*2.5)#-------Normal room with Delivery cost----
+    rnormal1=float(Delivery)/(400*2.5)#-------Normal room with Delivery cost----
 
     if room ==1:
         if chkb1.get() == 1:
@@ -127,57 +127,57 @@ def TotalResult():
     FinalTotal = "Total = Rs.", MyTotal
 
     num6=Total.get()
-    Display.delete(0,End)
+    Display.delete(0,'end')
     Display.insert(0,FinalTotal)
 
     if num6 <= '0.0':
-        Display.delete(0,End)
+        Display.delete(0,'end')
         Display.insert(0,'Please make an order.....')
 
 # ---------------Function for Currency Converter--------------------
 
 def Convert():
     var2=indicator.get()
-    var3=var1.get()
+    var=var1.get()
     if var2=="China":
-        Display.delete(0,END)
-        var4=("Yuan",(var3*0.093))
+        Display.delete(0,'end')
+        var4=("Yuan",(var*0.093))
         Display.insert(0,var4)
     elif var2=="France":
-        Display.delete(0,END)
-        var4=("Euro",(var3*88.36))
+        Display.delete(0,'end')
+        var4=("Euro",(var*88.36))
         Display.insert(0,var4)
     elif var2=="Ghana":
-        Display.delete(0,END)
-        var4=("Ghanian cedi",(var3*13.05))
+        Display.delete(0,'end')
+        var4=("Ghanian cedi",(var*13.05))
         Display.insert(0,var4)
     elif var2=="USA":
-        Display.delete(0,END)
-        var4=("USD",(var3*75.09))
+        Display.delete(0,'end')
+        var4=("USD",(var*75.09))
         Display.insert(0,var4)
     elif var2=="Mexico":
-        Display.delete(0,END)
-        var4=("Mexican Peso",(var3*3.31))
+        Display.delete(0,'end')
+        var4=("Mexican Peso",(var*3.31))
         Display.insert(0,var4)
     elif var2=="Nigeria":
-        Display.delete(0,END)
-        var4=("Nigerian Naira",(var3*0.19))
+        Display.delete(0,'end')
+        var4=("Nigerian Naira",(var*0.19))
         Display.insert(0,var4)
     else:
-        Display.delete(0,END)
+        Display.delete(0,'end')
         Display.insert(0,'Error Select a Country')
 
 # ----------------------------Reset Button-----------------------
 def Hotel():
-    Display.delete(0,END)
+    Display.delete(0,'end')
     Display.insert(0,"Hotel Management System")
 
 def Powered():
-    Display.delete(0,END)
+    Display.delete(0,'end')
     Display.insert(0,"Powered by Python")
 
 def Reset():
-    Display.delete(0,END)
+    Display.delete(0,'end')
     Display.insert(0,"System Ressetting.......")
     Display.after(2000,Hotel)
     Display.after(4000,Powered)
@@ -185,16 +185,16 @@ def Reset():
 
 def Rest():
     Clear()
-    Display.delete(0,END)
+    Display.delete(0,'end')
     Display.insert(0,'Hello! Welcome')
     Mealdicator.set(value="Delicious Meal")
     Drinkdicator.set(value="Fresh Drink")
     indicator.set(value="Choose a country")
-    txtQtofMeal.delete(0,END)
+    txtQtofMeal.delete(0,'end')
     txtQtofMeal.insert(0,0)
-    txtQtofDrink.delete(0,END)
+    txtQtofDrink.delete(0,'end')
     txtQtofDrink.insert(0,0)
-    txtAmount.delete(0,END)
+    txtAmount.delete(0,'end')
     txtAmount.insert(0,0)
     RoomCost.set(0.0)
     Total.set(0.0)
@@ -207,7 +207,7 @@ def Rest():
 
 # -------------------Clear Button----------------------
 def ClearScreen():
-    Display.delete(0,END)
+    Display.delete(0,'end')
     RoomCost.set('')
     Total.set('')
     ServiceCharge.set('')
@@ -219,7 +219,7 @@ def Stop():
     root.destroy()
 
 def Exit():
-    Display.delete(0,END)
+    Display.delete(0,'end')
     Display.insert(0,"Thanks for Patronage............")
     Display.after(3000,Stop)
 
@@ -357,7 +357,7 @@ txtDrink['values']=('Bottled water','Lime Juice','Cold Coffee','Heineken','Red W
 txtDrink.grid(row=2,column=1)
 
 lblQtofDrink = Label(f1,font=('aerial',16,'bold'),text='Qty. of Drink',bd=10,anchor=W)
-lblQtofDrink.grid(row=1,column=0)
+lblQtofDrink.grid(row=3,column=0)
 txtQtofDrink = Entry(f1,font=('aerial',16,'bold'),textvariable=Drink1,bd=10,insertwidth=4,bg='white',justify='right')
 txtQtofDrink.grid(row=3,column=1)
 
@@ -452,11 +452,11 @@ btnReset.grid(row=2,column=0)
 btnExit= Button(f4,padx=10,pady=8,bd=16,fg='white',font=('aerial',16,'bold'),width=10,text='Exit',bg='red',command=Exit)
 btnExit.grid(row=3,column=0)
 
+
 #--------------------------Logo----------------------------------------
 photo=PhotoImage(file='logo.png') ## Write the full path of image
 myphoto = Label(f1,image=photo)
 myphoto.grid(row=8,column=0)
-
 # ----------------------Scrollable Text-------------------------------
 scroll_text=StringVar()
 txtscroll = Entry(f2,textvariable = scroll_text ,font=('aerial',16,'bold'),fg='white',bd='10',bg='blue',width=32)
